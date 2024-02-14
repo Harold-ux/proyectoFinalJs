@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Proyecto final Js - Comisión 49825</title>
+</head>
+
+<body>
+    <h1>Groomers dog's.site</h1>
+    <div id="formularioContainer">
+        <form id="citasForm">
+            <select id="tipoUsuario" name="tipoUsuario">
+                <option value="" disabled selected>Seleccione el perfil de su cuenta</option>
+                <option value="dueño">Dueño</option>
+                <option value="groomer">Groomer</option>
+            </select>
+            <div id="opcionesDueño" style="display:none;">
+                <label for="accionDueño">Seleccione una opción:</label>
+                <select id="accionDueño" name="accionDueño">
+                    <option value="agregarUsuario">Agregar un nuevo usuario</option>
+                    <option value="buscarMascota">Buscar/agregar citas por nombres</option>
+                </select>
+                <input type="text" id="nuevoDueño" name="nuevoDueño" class="campo-oculto" placeholder="Nombre del dueño"
+                    required>
+                <input type="text" id="nuevaMascota" name="nuevaMascota" class="campo-oculto"
+                    placeholder="Nombre de la mascota" required>
+            </div>
+            <div id="opcionesGroomer" class="opciones" style="display:none;">
+                <label for="accionGroomer">Seleccione una opción:</label>
+                <select id="accionGroomer" name="accionGroomer">
+                    <option value="mostrarTodas">Mostrar todas las citas</option>
+                    <option value="buscarMascotaGroomer">Buscar citas por nombre de mascota</option>
+                </select>
+                <input type="text" id="mascotaABuscarGroomer" name="mascotaABuscarGroomer"
+                    placeholder="Nombre de la mascota">
+            </div>
+            <button type="button" id="enviarBtn">Enviar</button>
+        </form>
+        <div class="containerD">
+            <div class="animdog">
+                <div class="bodydog"></div>
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+                <div class="leg3"></div>
+                <div class="leg4"></div>
+                <div class="tail"></div>
+                <div class="ear"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="tongue"></div>
+            </div>
+        </div>
+        <div id="mensajeContainer"></div>
+    </div>
+    <div id="citasContainer">
+        <h3>servicio de peluquería canina</h3>
+        <div id="photoContainer"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="node_modules/toastify-js/src/toastify.js"></script>
+</body>
+
+</html>
